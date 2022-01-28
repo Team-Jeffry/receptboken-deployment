@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rb-configmap
+data:
+  config.js: |
+    let appConfig = {
+      API_HOST: "rb-backend",
+      API_PORT: "8080"
+    };

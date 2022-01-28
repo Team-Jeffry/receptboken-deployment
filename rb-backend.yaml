@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rb-backend
+spec:
+  selector:
+    matchLabels:
+      app: rb-backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rb-backend
+    spec:
+      containers:
+        - name: rb-backend
+          image: teamjeffry/receptboken:k8s-test
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_URL
+              value: mongodb://mongo:27017/recipe-db?authSource=admin
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rb-backend
+spec:
+  type: NodePort
+  selector:
+    app: rb-backend
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
