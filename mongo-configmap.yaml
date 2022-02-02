@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: rb-configmap
-data:
-  valueFrom:
-    secretKeyRef:
-      name: rb-secrets
-      key: mongo-url

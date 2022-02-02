@@ -21,8 +21,8 @@ spec:
           env:
             - name: MONGO_URL
               valueFrom:
-                configMapKeyRef:
-                  name: rb-configmap
+                secretKeyRef:
+                  name: rb-secrets
                   key: mongo-url
 
 ---
