@@ -1,4 +1,4 @@
-# Receptboken-deployment
+## Receptboken - Deployment
 
 Kubernetes manifest for deployment of Receptboken to Google Kubernetes Engine.
 
