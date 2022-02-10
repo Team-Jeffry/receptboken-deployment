@@ -1,6 +1,6 @@
 # Receptboken-deployment
 
-Kubernetes manifest för deployment av Receptbokstjänsten till Google Kubernetes Engine.
+Kubernetes manifest for deployment of Receptboken to Google Kubernetes Engine.
 
 
 <br>
