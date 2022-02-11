@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: rb-backend
-          image: teamjeffry/receptboken:k8s-test
+          image: europe-north1-docker.pkg.dev/teamjeffry-receptboken/teamjeffry-repo/receptboken-backend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

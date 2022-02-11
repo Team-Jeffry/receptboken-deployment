@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: rb-frontend
-          image: teamjeffry/receptboken-frontend:k8s-test-v2
+          image: europe-north1-docker.pkg.dev/teamjeffry-receptboken/teamjeffry-repo/receptboken-frontend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
